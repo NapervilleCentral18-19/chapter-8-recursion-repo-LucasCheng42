@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=ch8starter
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=s\ len
+comment2.target=void\ reversePrint(java.lang.String,\ int)
+comment3.params=a\ b
+comment3.target=int\ pow(int,\ int)
+comment4.params=a\ b
+comment4.target=double\ btp(int,\ int)
+comment5.params=num
+comment5.target=int\ foo(int)
+comment6.params=
+comment6.target=void\ ei()
+comment7.params=a\ b
+comment7.target=int\ multi(int,\ int)
+comment8.params=num
+comment8.target=int\ sum(int)
+numComments=9
