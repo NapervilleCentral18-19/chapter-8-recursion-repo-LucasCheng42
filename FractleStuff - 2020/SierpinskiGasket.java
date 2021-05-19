@@ -69,23 +69,37 @@ public class SierpinskiGasket extends JPanel
        int dxsquared = (int)Math.pow(xPos[0] - xPos[1],2);
        int dysquared = (int)Math.pow(yPos[0] - yPos[1],2);
        int distance = (int)Math.sqrt(dxsquared + dysquared);
-
-
-
+       
         if (distance > 10)
         {
             //find midpoints and draw triangle
-            //int ABMidx = (xPos[0]
-            //int ABMidy = (
+            
+            int ABMidx = (xPos[0]+xPos[1])/2;
+            int ABMidy = (yPos[0]+yPos[1])/2;
+            
+            int BCMidx = (xPos[1]+xPos[2])/2;
+            int BCMidy = (yPos[1]+yPos[2])/2;
+            
+            int CAMidx = (xPos[2]+xPos[3])/2;
+            int CAMidy = (yPos[2]+yPos[3])/2;
+            
+            int[] xPosNew = new int[] {ABMidx, BCMidx, CAMidx, ABMidx};
+            int[] yPosNew = new int[] {ABMidy, BCMidy, CAMidy, ABMidy};
+            
             
             //draw the tri
-            
-            
-            
+            page.drawPolyline (xPosNew, yPosNew, xPosNew.length);
+          
             //call the 3 new triangles
-           
-
-
+            int[] lRightx = new int[] {xPos[0], ABMidx, CAMidx, xPos[0]};
+            int[] lRighty = new int[] {yPos[0], ABMidy, CAMidy, yPos[0]};
+            Triangle(lRightx, lRighty, page);
+            int[] Topx = new int[] {xPos[2], BCMidx, CAMidx, xPos[2]};
+            int[] Topy = new int[] {yPos[2], BCMidy, CAMidy, yPos[2]};
+            Triangle(Topx, Topy, page);
+            int[] lLeftx = new int[] {xPos[1], BCMidx, ABMidx, xPos[1]};
+            int[] lLefty = new int[] {yPos[1], BCMidy, ABMidy, yPos[1]};
+            Triangle(lLeftx, lLefty, page);
         }
 
 

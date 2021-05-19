@@ -9,10 +9,9 @@ public class GCD
 {
     private int num1, num2;
     public static void main (String args[]){
-        System.out.println("yo mama");
         System.out.println(gcd(1,3));
         System.out.println(gcd(27,3));
-        System.out.println(gcd(27,9));
+        System.out.println(gcd(9,27));
         System.out.println(gcd(30,12));
         System.out.println(gcd(12,30));
     }
